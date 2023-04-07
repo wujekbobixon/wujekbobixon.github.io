@@ -1,0 +1,217 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(183, 190, 196, 0.448);
+    scroll-behavior: smooth;
+  }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+body::-webkit-scrollbar{
+    display: none;
+  }
+/* header */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+    header img{
+        width: 100px;
+        height: 100px;
+        border-radius: 15px;
+    }
+    header label{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 2em;
+        margin: 20px;
+    }
+    nav{
+        margin-top: 30px;
+        display: flex;
+        background-color: rgb(67, 65, 65);
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 2px 2px 0px 0px black;
+    }
+        nav ol{
+            margin: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+
+            font-weight: 700;
+            font-size: 2em;
+            list-style: none;
+        }
+            nav ol li a{
+                color: white;
+                text-decoration: none;
+            }
+            nav ol li a:hover, nav ol li:hover{
+                color: #d7a395;
+                transition: 0.5s;
+                transform: scale(1.2);
+            }
+/* aside */
+aside{
+    height: 400px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+    aside a{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-decoration:none;
+    }
+        aside a label{
+            display: flex;
+            background-color: rgba(183, 190, 196, 0.448);
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 2em;
+            z-index: 2;
+        }
+        aside a video{
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            width: auto;
+            height: 400px;
+        }
+/* main */
+main{
+    display: flex;
+    
+    justify-content: space-between;
+    width: 100%;
+}
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #edefee;
+        width: 30%;
+        margin: 10px;
+        height: 500px;
+        border-radius: 15px;
+        overflow-y: scroll;
+        padding-bottom: 20px;
+        box-shadow: 2px 2px 0px 0px black;
+    }
+    article:hover{
+        background-color: #d7a395;
+        transition: 0.5s;
+    }
+        article h1{
+            text-transform: uppercase;
+            margin: 15px;
+        }
+        article img,article p{
+            width: 80%;
+        }
+        article::-webkit-scrollbar{
+            display: none;
+        }
+/* Footer */
+footer{     
+    margin: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+    footer img{
+        height: 10vh;
+        width: 10vh;
+    }
+    footer #copyright{
+        border-top: 1px solid black;
+    }
+        #copyright h2{
+            font-size: 0.75em;
+            font-weight: 100;
+        }
+        /*mobile*/
+@media only screen and (max-width: 1000px)  {
+    header{
+        margin-top: 200px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    header label{
+        font-size: 1.5em;
+        border-bottom: 1px solid black;
+        transition: 0.5s;
+    }
+    nav {
+        top:0px;
+        width: 90%;
+        position: fixed;
+        transition: 0.5s;
+        z-index: 3;
+    }
+    nav ol{
+        font-size: 0.75em;
+        transition: 0.5s;
+    }
+
+    nav ol li a:hover, nav ol li:hover{
+        color: #d7a395;
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    aside,aside a video {
+        height: 300px;
+        width: 100%;
+        transition: 0.5s;
+    }
+    main{
+        flex-wrap: wrap;
+        transition: 0.5s;
+    }
+    article{
+        width: 90%;
+        transition: 0.5s;
+    }
+    article img{
+        transition: 0.5s;
+        width: 250px;
+    }
+    footer{
+        transition: 0.5s;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer img{
+        transition: 0.5s;
+        margin-bottom: 10px;
+    }
+    
+}
+@media only screen and (max-width: 800px)  {
+    article img{
+        width: 150px;
+        transition: 0.5s;
+    }
+}
